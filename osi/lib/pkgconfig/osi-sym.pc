@@ -1,0 +1,15 @@
+prefix=/usr/local
+#prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin-or
+
+Name: OsiSym
+Description: COIN-OR Open Solver Interface for SYMPHONY
+URL: https://github.com/coin-or/SYMPHONY
+Version: devel
+Cflags: -I${includedir}
+Libs: -L${libdir} -lOsiSym
+Requires.private: clp cgl osi coinutils 
+#Libs: -L${libdir} -lOsiSym     
+#Requires: clp cgl osi coinutils 

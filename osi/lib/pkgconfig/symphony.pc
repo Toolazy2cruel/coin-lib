@@ -1,0 +1,15 @@
+prefix=/usr/local
+#prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin-or
+
+Name: SYMPHONY
+Description: SYMPHONY MILP Solver Framework
+URL: https://github.comn/coin-or/SYMPHONY
+Version: devel
+Libs: -L${libdir} -lSym 
+Libs.private: -lreadline -lncurses          
+Cflags: -I${includedir} 
+Requires:
+Requires.private: coinglpk osi-glpk osi-clp clp cgl osi coinutils 
